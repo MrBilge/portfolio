@@ -5,65 +5,68 @@ import { useRef } from "react";
 export default function MySkills() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const MySkills = [
-    {
-      icon: <img src="/assets/html5.png" alt="html5" className="w-20 h-20" />,
-      name: "HTML & CSS",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-    {
-      icon: <img src="/assets/js.png" alt="html5" className="w-20 h-20" />,
-      name: "Javascript",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-    {
-      icon: <img src="/assets/react.png" alt="html5" className="w-20 h-20" />,
-      name: "React",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-    {
-      icon: <img src="/assets/nextjs.png" alt="html5" className="w-20 h-20" />,
-      name: "Next Js",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-
-    {
-      icon: (
-        <img src="/assets/tailwind.png" alt="html5" className="w-20 h-20" />
-      ),
-      name: "Tailwind CSS",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-    {
-      icon: <img src="/assets/expo.png" alt="html5" className="w-20 h-20" />,
-      name: "React Native Expo",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-
-    {
-      icon: <img src="/assets/figma.png" alt="html5" className="w-14 h-20" />,
-      name: "Figma",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-    {
-      icon: <img src="/assets/react.png" alt="html5" className="w-20 h-20" />,
-      name: "React",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-    {
-      icon: <img src="/assets/nextjs.png" alt="html5" className="w-20 h-20" />,
-      name: "Next Js",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-
-    {
-      icon: (
-        <img src="/assets/tailwind.png" alt="html5" className="w-20 h-20" />
-      ),
-      name: "Tailwind CSS",
-      description: "Duis aute irure dolor in reprehenderit in voluptate.",
-    },
-  ];
+const MySkills = [
+  {
+    icon: <img src="/assets/html5.png" alt="HTML & CSS" className="w-20 h-20" />,
+    name: "HTML & CSS",
+    description:
+      "Building semantic, accessible, and responsive layouts with a strong focus on clean structure and cross-browser compatibility.",
+  },
+  {
+    icon: <img src="/assets/js.png" alt="JavaScript" className="w-20 h-20" />,
+    name: "JavaScript (ES6+)",
+    description:
+      "Developing dynamic and interactive web features using modern JavaScript practices and clean, maintainable code.",
+  },
+  {
+    icon: <img src="/assets/react.png" alt="React" className="w-20 h-20" />,
+    name: "React",
+    description:
+      "Building reusable components and interactive user interfaces with a focus on performance, scalability, and maintainability.",
+  },
+  {
+    icon: <img src="/assets/nextjs.png" alt="Next.js" className="w-20 h-20" />,
+    name: "Next.js",
+    description:
+      "Developing modern web applications with optimized routing, server-side rendering, and SEO-friendly architecture.",
+  },
+  {
+    icon: <img src="/assets/tailwind.png" alt="Tailwind CSS" className="w-20 h-20" />,
+    name: "Tailwind CSS",
+    description:
+      "Creating consistent and responsive user interfaces efficiently using utility-first CSS and modern design principles.",
+  },
+  {
+    icon: <img src="/assets/jquery.png" alt="jQuery" className="w-20 h-20" />,
+    name: "jQuery (Legacy UI & AJAX)",
+    description:
+      "Maintaining and enhancing legacy interfaces with DOM manipulation, event handling, and AJAX-based workflows.",
+  },
+  {
+    icon: <img src="/assets/aspnet.png" alt="ASP.NET MVC / Razor Pages" className="w-24 h-20" />,
+    name: "ASP.NET MVC / Razor Pages",
+    description:
+      "Developing front-end user interfaces for enterprise web applications using Razor views and MVC architecture.",
+  },
+  {
+    icon: <img src="/assets/expo.png" alt="React Native Expo" className="w-20 h-20" />,
+    name: "React Native (Expo)",
+    description:
+      "Building cross-platform mobile applications with reusable components and a streamlined development workflow.",
+  },
+  {
+    icon: <img src="/assets/figma.png" alt="Figma" className="w-14 h-20" />,
+    name: "Figma",
+    description:
+      "Designing and translating UI concepts into clean, developer-friendly components with attention to layout and usability.",
+  },
+  {
+    icon: <img src="/assets/github.png" alt="Git & GitHub" className="w-32 h-20" />,
+    name: "Git & GitHub",
+    description:
+      "Managing version control, collaboration, and clean commit workflows across personal and corporate projects.",
+  },
+];
 
   const handleScroll = (direction: "left" | "right") => {
     if (scrollRef.current) {

@@ -8,7 +8,9 @@ export default function AboutMe() {
         </h3>
         <div className="flex flex-col space-y-5">
           <h1 className="text-4xl font-semibold ">
-            I`ve Been developing websites since 2022
+           Front-End Developer Focused on Modern Web Experiences
+
+
           </h1>
           <p className="text-gray-500 font-sans">
             I’m passionate about building clean, responsive, and user-friendly
@@ -17,7 +19,7 @@ export default function AboutMe() {
             enjoy turning complex problems into simple, elegant solutions.
           </p>
         </div>
-        <div className="flex group space-x-2 border-b border-gray-500 transition-all duration-700 hover:border-white w-max">
+        <div className="hidden flex group space-x-2 border-b border-gray-500 transition-all duration-700 hover:border-white w-max">
           <p className="flex justify-center items-center  md:text-2xl cursor-pointer">
             More about me
             <ArrowRightIcon className="w-6 h-6 text-amber-200 inline transition-all duration-700 ml-2 group-hover:ml-5" />
@@ -33,16 +35,15 @@ export default function AboutMe() {
             </p>
           </div>
           <div className="flex space-x-2">
-            <p className="text-6xl">17 </p>
+            <p className="text-6xl">10+ </p>
             <p className="flex justify-center items-center">
               Successful project
             </p>
           </div>
         </div>
         <p className="text-gray-500 font-sans">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi unde
-          ullam repellat eius maiores. Iusto quas totam repudiandae
-          exercitationem mollitia, praesentium, dolorem magni
+         Successfully delivered 10+ projects across personal and corporate environments,
+  focusing on clean UI, usability, and real-world requirements.
         </p>
       </div>
     </div>

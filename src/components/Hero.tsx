@@ -1,6 +1,6 @@
 import { ChevronDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Facebook, Instagram, Github, Youtube, Linkedin } from "lucide-react";
-
+import Link from "next/link";
 type HeroProps = {
   onScrollClick: () => void;
 };
@@ -14,7 +14,7 @@ export function Hero({ onScrollClick }: HeroProps) {
           <h1 className="text-3xl  md:text-3xl  text-amber-100 font-sans sm:font-mono sm:tracking-wider bg-black/60 sm:bg-transparent p-2 ">
             I`m Bilgehan,
             <span className="block mt-5 tracking-wider">
-              a Web - Mobile Developer
+              Front-End Developer
             </span>
           </h1>
           <p className="text-sm xl:text-lg font-sans text-gray-300 tracking-widest bg-black/60 sm:bg-transparent p-2 rounded ">
@@ -44,7 +44,7 @@ export function Hero({ onScrollClick }: HeroProps) {
             solutions. I write code to make technology more accessible and
             closer to people.
           </p>
-          <div className="group flex w-max mt-5 ">
+          <div className="hidden group flex w-max mt-5 ">
             <p className="text-sm  xl:text-lg cursor-pointer border-b border-gray-500 transition-all duration-600  group-hover:border-white ">
               LEARN MORE
             </p>
@@ -56,11 +56,10 @@ export function Hero({ onScrollClick }: HeroProps) {
         <div className="flex flex-col space-y-2">
           <h1 className="text-lg xl:text-2xl text-amber-100">My Work</h1>
           <p className="text-sm xl:text-lg  text-gray-300 font-serif tracking-wider">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga ipsa
-            eveniet harum, mollitia velit provident iste officiis eum. Voluptas
-            totam aspernatur dicta nihil, libero nam velit pariatur porro culpa.
+ A selection of projects where I focus on building clean, responsive, and user-friendly interfaces.
+  My work includes both personal projects and internal applications developed for corporate environments.
           </p>
-          <div className="group flex w-max  mt-5 space-x-2">
+          <div className="hidden group flex w-max  mt-5 space-x-2">
             <p className="text-sm xl:text-lg cursor-pointer border-b border-gray-500 transition-all duration-700 group-hover:border-white">
               BROWSE PORTFOLIO
             </p>
@@ -72,12 +71,28 @@ export function Hero({ onScrollClick }: HeroProps) {
         <div className="space-y-2">
           <h1 className="text-lg xl:text-2xl text-amber-100">Follow Me</h1>
           <div className="flex w-max space-x-3 group text-md">
-            <Facebook className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
-            <Instagram className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
-            <Github className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
-            <Youtube className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
-            <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
+          
+         <a
+  href="https://www.instagram.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Instagram className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 cursor-pointer" />
+</a>
+        <a
+  href="https://www.github.com/MrBilge"
+  target="_blank"
+  rel="noopener noreferrer"
+>     <Github className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
+          </a>
+        <a
+  href="https://www.linkedin.com/in/ahmet-bilgehan-eybek-874762272//"
+  target="_blank"
+  rel="noopener noreferrer"
+>     <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
+          </a>
           </div>
+
         </div>
       </div>
     </div>

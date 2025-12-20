@@ -16,21 +16,35 @@ export default function Footer() {
             <div className="space-y-2 ">
               <h1 className="font-serif tracking-widest">A. Bilgehan Eybek</h1>
               <h2 className=" text-gray-600 font-semibold">
-                Software dev. at M.E.B
+            Web Interface Developer
               </h2>
               <div className="flex mt-2 w-max space-x-3 group">
-                <Facebook className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y-1 cursor-pointer" />
-                <Instagram className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y-1 cursor-pointer" />
-                <Github className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y-1 cursor-pointer" />
-                <Youtube className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y-1 cursor-pointer" />
-                <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y-1 cursor-pointer" />
+                        <a
+  href="https://www.instagram.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Instagram className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 cursor-pointer" />
+</a>
+        <a
+  href="https://www.github.com/MrBilge"
+  target="_blank"
+  rel="noopener noreferrer"
+>     <Github className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
+          </a>
+        <a
+  href="https://www.linkedin.com/in/ahmet-bilgehan-eybek-874762272//"
+  target="_blank"
+  rel="noopener noreferrer"
+>     <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
+          </a>
               </div>
             </div>
           </div>
         </div>
 
         <div className="md:w-2/3 lg:w-full flex items-center flex-col   space-y-10">
-          <h1 className="group md:text-2xl lg:text-4xl font-serif w-max cursor-pointer">
+          <h1 className="group md:text-2xl lg:text-4xl font-serif w-max">
             Get in touch
             <ArrowRightIcon className="inline w-10 h-10 text-blue-600 ml-2 transition-all duration-300 group-hover:ml-5" />
           </h1>
@@ -40,7 +54,7 @@ export default function Footer() {
               <p className="text-gray-500">EMAIL ME:</p>
               <div className="group w-max flex items-center">
                 <p className=" border-b border-gray-500 transition-all duration-300 hover:border-white w-max py-1 ">
-                  contact@bilgehan.com
+                  b.eybek9307@gmail.com
                 </p>
                 <span>
                   <ArrowRightIcon className=" w-6 h-6 ml-2 transition-all duration-300 group-hover:ml-4" />
@@ -51,7 +65,8 @@ export default function Footer() {
               <p className="text-gray-500">CALL ME:</p>
               <div className="group w-max flex items-center">
                 <p className="border-b border-gray-500 transition-all duration-300 hover:border-white w-max py-1 text-gray-300">
-                  0546 881 00 94
+            +90 546 881 00 94
+
                 </p>
                 <span>
                   <ArrowRightIcon className=" w-6 h-6 ml-2 transition-all duration-300 group-hover:ml-4" />
