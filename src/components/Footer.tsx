@@ -43,21 +43,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="md:w-2/3 lg:w-full flex items-center flex-col   space-y-10">
+        <div className=" md:w-2/3 lg:w-full flex items-center flex-col   space-y-10">
           <h1 className="group md:text-2xl lg:text-4xl font-serif w-max">
             Get in touch
             <ArrowRightIcon className="inline w-10 h-10 text-blue-600 ml-2 transition-all duration-300 group-hover:ml-5" />
           </h1>
 
-          <div className="flex gap-10 ">
-            <div className="w-full space-y-2  font-semibold">
+          <div className=" flex gap-5 md:gap-10 ">
+            <div className=" w-full space-y-2  font-semibold">
               <p className="text-gray-500">EMAIL ME:</p>
               <div className="group w-max flex items-center">
                 <p className=" border-b border-gray-500 transition-all duration-300 hover:border-white w-max py-1 ">
                   b.eybek9307@gmail.com
                 </p>
                 <span>
-                  <ArrowRightIcon className=" w-6 h-6 ml-2 transition-all duration-300 group-hover:ml-4" />
+                  <ArrowRightIcon className="hidden sm:block w-6 h-6 ml-2 transition-all duration-300 group-hover:ml-4" />
                 </span>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Footer() {
 
                 </p>
                 <span>
-                  <ArrowRightIcon className=" w-6 h-6 ml-2 transition-all duration-300 group-hover:ml-4" />
+                  <ArrowRightIcon className="hidden sm:block w-6 h-6 ml-2 transition-all duration-300 group-hover:ml-4" />
                 </span>
               </div>
             </div>
