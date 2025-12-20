@@ -13,7 +13,7 @@ export default function MyPortfolio() {
             Take a look at the latest projects I’ve done
           </h1>
 
-          <div className="group flex w-max space-x-2">
+          <div className="hidden group flex w-max space-x-2">
             <p className="border-b border-gray-500 font-semibold text-lg  transition-all duration-300 hover:border-white cursor-pointer">
               Browse all projects
             </p>
