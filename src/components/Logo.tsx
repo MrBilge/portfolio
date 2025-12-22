@@ -4,7 +4,7 @@ export default function Logo() {
       <img src="/assets/html-logo.png" className="w-15 h-15 lg:w-20 lg:h-24" />
 
       <div className="flex  justify-center items-center">
-        <h1 className=" font-serif"> Modern & Legacy UI Developer </h1>
+        <h1 className=" font-serif">Modern & Legacy UI Developer </h1>
       </div>
     </div>
   );
