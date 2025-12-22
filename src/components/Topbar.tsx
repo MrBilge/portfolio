@@ -64,7 +64,7 @@ function MobileFullMenu({ onScrollClick, refs }: TopbarProps) {
   return (
     <>
       <button
-        className="lg:hidden z-50 fixed top-3 right-5 text-white cursor-pointer"
+        className="lg:hidden  text-white cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X size={32} /> : <Menu size={32} />}
