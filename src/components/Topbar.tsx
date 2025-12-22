@@ -31,7 +31,7 @@ export default function Topbar({ onScrollClick, refs }: TopbarProps) {
     },
   ];
   return (
-    <div className="sticky top-0  z-50 flex justify-between second-bg  px-10">
+    <div className="sticky top-0  z-50 flex justify-between second-bg px-0  md:px-10">
       <Logo />
 
       <div className="hidden lg:flex justify-between gap-10 items-center  font-serif">
