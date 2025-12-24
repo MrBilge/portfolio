@@ -44,7 +44,7 @@ export default function MyPortfolio() {
             mainImage="/assets/greendrive1.png"
             mainView="w-1/2"
             subImage1="/assets/greendrive.png"
-            subImage2="/assets/greendrive.png"
+            subImage2="/assets/greenyeni.PNG"
           />
           <PortfolioCard
             primaryButton="Next Js"
