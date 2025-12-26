@@ -54,6 +54,9 @@
 }
 
 
+html, body {
+  overflow-x: hidden;
+}
 
 body {
 background-color: rgb(var(--ig-primary-background)); 
