@@ -82,7 +82,7 @@ const maxorbit = Math.min(w, h) * 0.35;
         this.x = centerx + Math.cos(this.angle) * this.currentOrbital;
         this.y = centery + Math.sin(this.angle) * this.currentOrbital;
       }
-
+          if(context === null) return;
       context.beginPath();
    context.save();
 context.translate(this.x, this.y);
@@ -127,7 +127,7 @@ context.restore();
   function loop() {
     rafId = requestAnimationFrame(loop);
     currentTime = (Date.now() - startTime) / 50;
-
+      if(context === null) return;
     context.clearRect(0, 0, w, h);
     stars.forEach((s) => s.draw());
   }
