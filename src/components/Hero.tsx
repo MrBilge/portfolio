@@ -30,7 +30,8 @@ export function Hero({ onScrollClick }: HeroProps) {
         <div
           style={{ borderRadius: "50%" }}
           onClick={onScrollClick}
-          className="w-max p-4 md:p-6 xl:p-10  sm:bg-blue-600 cursor-pointer transition-all duration-300 hover:scale-75"
+          className="w-max p-4 md:p-6 xl:p-10  sm:bg-[#070f14]
+ cursor-pointer transition-all duration-300 hover:scale-75"
         >
           <ChevronDownIcon className="h-9 xl:w-9 animate-bounce-large" />
         </div>

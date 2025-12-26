@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
+import Footer from "@/components/Footer";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,6 +10,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           className="w-full h-dvh overflow-y-auto"
         >
+         
           {children}
         </main>
       </div>

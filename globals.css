@@ -12,7 +12,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --second-color: #0b1a21;
+--second-color: #070f14;
+  --ig-primary-background: 12, 16, 20;
+
+
 
 
 }
@@ -53,7 +56,7 @@
 
 
 body {
-background: #1C1F26;
+background-color: rgb(var(--ig-primary-background)); 
   color: #E0E6F1;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
@@ -63,7 +66,7 @@ background: #1C1F26;
 }
  
 .default-bg {
-  background-color:  #1C1F26
+  background-color: black
 }
 
 .font-poppins {
@@ -74,3 +77,201 @@ background: #1C1F26;
   font-family: 'Playfair Display', serif;
 }
 
+.card-surface {
+  background: linear-gradient(
+    to bottom,
+    oklch(0.185 0 0),
+    oklch(0.185 0 0)
+  );
+  border-radius: 1.5em;
+}
+ .main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2em;
+}
+
+.svg-container {
+  position: absolute;
+}
+
+.card-container {
+  padding: 2px;
+  border-radius: 1.5em;
+  position: relative;
+  background: linear-gradient(
+      -30deg,
+      var(--gradient-color),
+      transparent,
+      var(--gradient-color)
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-neutral-900),
+      var(--color-neutral-900)
+    );
+    clip-path: inset(0 round 24px);
+}
+
+.card-container[data-effect="↖️"] {
+ --f: url(#electric);  --electric-border-color: #dd8448;
+  --electric-light-color: oklch(from var(--electric-border-color) l c h);
+  --gradient-color: oklch(from var(--electric-border-color) 0.3 calc(c / 2) h / 0.4);
+}
+
+
+
+.inner-container {
+  position: relative;
+  
+}
+
+.border-outer {
+  border: 2px solid oklch(from var(--electric-border-color) l c h / 0.5);
+  border-radius: 1.5em;
+  padding-right: .15em;
+  padding-bottom: .15em;
+}
+
+.main-card {
+  width: 22rem;
+  aspect-ratio: 7 / 10;
+  border-radius: 1.5em;
+  border: 2px solid var(--electric-border-color);
+  margin-top: -4px;
+  margin-left: -4px;
+  filter: var(--f);
+  
+}
+
+.glow-layer-1,
+.glow-layer-2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+}
+
+.glow-layer-1 {
+  border: 2px solid oklch(from var(--electric-border-color) l c h / 0.6);
+  filter: blur(1px);
+}
+
+.glow-layer-2 {
+  border: 2px solid var(--electric-light-color);
+  filter: blur(4px);
+}
+
+.overlay-1,
+.overlay-2 {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  mix-blend-mode: overlay;
+  filter: blur(16px);
+  background: linear-gradient(
+    -30deg,
+    white,
+    transparent 30%,
+    transparent 70%,
+    white
+  );
+}
+
+.overlay-2 {
+  opacity: 0.5;
+}
+
+.background-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  z-index: -1;
+
+  background: radial-gradient(
+    circle at center,
+    oklch(from var(--electric-border-color) l c h / 0.35),
+    transparent 70%
+  );
+
+  filter: blur(28px);
+  transform: scale(1.1);
+  opacity: 0.15;
+}
+
+.content-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding : 5px
+}
+
+.content-top,
+.content-bottom {
+  padding: 48px;
+}
+
+.title {
+  font-size: 2.25em;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.description {
+  opacity: 0.5;
+}
+
+.divider {
+  height: 1px;
+  border: none;
+  opacity: 0.1;
+  background: currentColor;
+  mask-image: linear-gradient(to right, transparent, black, transparent);
+}
+
+.centerHover {
+  width: 255px;
+  height: 255px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+  line-height: 255px;
+  text-align: center;
+  transition: all 500ms ease;
+}
+
+.centerHover span {
+  color: #aaa;
+  font-family: serif;
+  font-size: 18px;
+  position: relative;
+  transition: all 300ms ease;
+}
+
+.centerHover span::before,
+.centerHover span::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 16px;
+  background-color: #aaa;
+  vertical-align: middle;
+  margin: 0 12px;
+  transition: all 300ms ease;
+}
+
+.centerHover:hover span {
+  color: #fff;
+}
+
+.centerHover:hover span::before,
+.centerHover:hover span::after {
+  background-color: #fff;
+}

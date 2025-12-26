@@ -5,7 +5,7 @@ import Avatar from "./Avatar";
 
 export default function Footer() {
   return (
-    <div className="w-full h-max flex justify-center md:items-center second-bg md:px-0 lg:px-10 border-t border-gray-600">
+    <div className="w-full  flex justify-center md:items-center second-bg md:px-0 lg:px-10 ">
       <div className="w-full p-10 gap-15 md:gap-20 lg:gap-0 flex flex-col-reverse   md:flex-row justify-center lg:justify-between     ">
         <div className="lg:w-1/3 flex justify-center items-center   space-x-5 ">
           <div>
@@ -44,14 +44,14 @@ export default function Footer() {
         </div>
 
         <div className=" md:w-2/3 lg:w-full flex items-center flex-col   space-y-10">
-          <h1 className="group md:text-2xl lg:text-4xl font-serif w-max">
+          <h1 className="group md:text-2xl lg:text-xl font-serif w-max">
             Get in touch
             <ArrowRightIcon className="inline w-10 h-10 text-blue-600 ml-2 transition-all duration-300 group-hover:ml-5" />
           </h1>
 
           <div className=" flex gap-5 md:gap-10 ">
             <div className=" w-full space-y-2  font-semibold">
-              <p className="text-gray-500">EMAIL ME:</p>
+              <p className="text-gray-500">EMAIL ME</p>
               <div className="group w-max flex items-center">
                 <p className=" border-b border-gray-500 transition-all duration-300 hover:border-white w-max py-1 ">
                   b.eybek9307@gmail.com
@@ -62,7 +62,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="w-full space-y-2 font-semibold">
-              <p className="text-gray-500">CALL ME:</p>
+              <p className="text-gray-500">CALL ME</p>
               <div className="group w-max flex items-center">
                 <p className="border-b border-gray-500 transition-all duration-300 hover:border-white w-max py-1 text-gray-300">
             +90 546 881 00 94

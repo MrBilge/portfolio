@@ -1,13 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import { toast } from "sonner";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon , ArrowDownIcon } from "@heroicons/react/24/solid";
 import { AddContact } from "@/app/api/contact/action";
+import BlackHole from "./BlackHole";
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showForm , setShowForm] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  
+
+  useEffect(() => {
+  if (showForm) {
+    requestAnimationFrame(() => setMounted(true));
+  }
+}, [showForm]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -56,11 +67,34 @@ export default function ContactForm() {
   };
 
   return (
-    <form
+
+     <> 
+     
+     {!showForm ?  <BlackHole onEnter={() => setShowForm(true)} />
+     
+     :  
+     
+     (
+      <div  className={`w-full   space-y-20 lg:flex gap-5 transition-all duration-900 ${mounted ? "animate-fadeIn"  : "opacity-0"}  `}>   
+
+
+       <div className="lg:w-1/2">
+          <div className="hidden lg:block border-t-4 gap-10 border-t-white p-4 w-24 lg:w-48"></div>
+          <div className="h-full w-full space-y-10 ">
+            <h1 className="w-full lg:text-3xl xl:text-5xl tracking-widest text-center lg:text-start ">
+              Interested in working together ? Let’s talk
+              <ArrowRightIcon className="hidden lg:inline  w-20 h-20 text-blue-700  ml-3" />
+              <ArrowDownIcon className=" inline lg:hidden w-10 h-10 text-blue-700  ml-3" />
+            </h1>
+          </div>
+        </div>
+
+      
+       <form
       onSubmit={handleSubmit}
-      className=" flex flex-col sm:p-10 sm:px-30 md:p-0 space-y-10"
+      className=" flex flex-col lg:w-1/3 sm:p-10 sm:px-30 md:p-0 space-y-10"
     >
-      <div className="transition-all duration-300 hover:border-white border-b border-gray-500">
+      <div className="transition-all duration-900 hover:border-white border-b border-gray-500">
         <input
           required
           type="text"
@@ -109,5 +143,17 @@ export default function ContactForm() {
         )}
       </div>
     </form>
+    
+    
+    </div>
+     
+     )  }
+    
+
+
+     
+     </>
+
+    
   );
 }

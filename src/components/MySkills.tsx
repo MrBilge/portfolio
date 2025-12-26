@@ -1,6 +1,8 @@
 "use client";
 import { ArrowRightIcon, ArrowLeftIcon } from "lucide-react";
 import { useRef } from "react";
+import SkillCards from "./SkillCard";
+import { ElectricWrapper } from "./ElectricWrapper";
 
 export default function MySkills() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -11,31 +13,37 @@ const MySkills = [
     name: "HTML & CSS",
     description:
       "Building semantic, accessible, and responsive layouts with a strong focus on clean structure and cross-browser compatibility.",
+      
   },
+  
   {
     icon: <img src="/assets/js.png" alt="JavaScript" className="w-20 h-20" />,
     name: "JavaScript (ES6+)",
     description:
       "Developing dynamic and interactive web features using modern JavaScript practices and clean, maintainable code.",
   },
-  {
+   {
+    icon: <img src="/assets/tailwind.png" alt="Tailwind CSS" className="w-20 h-20" />,
+    name: "Tailwind CSS",
+    description:
+      "Creating consistent and responsive user interfaces efficiently using utility-first CSS and modern design principles.",
+       wrapper : true
+  },
+   {
     icon: <img src="/assets/react.png" alt="React" className="w-20 h-20" />,
     name: "React",
     description:
       "Building reusable components and interactive user interfaces with a focus on performance, scalability, and maintainability.",
+     wrapper : true
   },
   {
     icon: <img src="/assets/nextjs.png" alt="Next.js" className="w-20 h-20" />,
     name: "Next.js",
     description:
       "Developing modern web applications with optimized routing, server-side rendering, and SEO-friendly architecture.",
+       wrapper : true
   },
-  {
-    icon: <img src="/assets/tailwind.png" alt="Tailwind CSS" className="w-20 h-20" />,
-    name: "Tailwind CSS",
-    description:
-      "Creating consistent and responsive user interfaces efficiently using utility-first CSS and modern design principles.",
-  },
+ 
   {
     icon: <img src="/assets/jquery.png" alt="jQuery" className="w-20 h-20" />,
     name: "jQuery (Legacy UI & AJAX)",
@@ -48,6 +56,8 @@ const MySkills = [
     description:
       "Developing front-end user interfaces for enterprise web applications using Razor views and MVC architecture.",
   },
+
+  
   {
     icon: <img src="/assets/expo.png" alt="React Native Expo" className="w-20 h-20" />,
     name: "React Native (Expo)",
@@ -70,7 +80,7 @@ const MySkills = [
 
   const handleScroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = 250;
+      const scrollAmount = 350;
       scrollRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -112,18 +122,19 @@ const MySkills = [
           ref={scrollRef}
           className="flex  overflow-x-auto  gap-5 mt-10 w-full "
         >
-          {MySkills.map((item, index) => (
-            <div
-              className="shrink-0 w-[250px]  space-y-5 py-20 px-5 bg-gray-800 rounded-2xl"
-              key={index}
-            >
-              {item.icon}
-              <p className="text-2xl font-semibold">{item.name}</p>
-              <p className="font-playfair">{item.description}</p>
+          {MySkills.map((item, index) => {
 
-              <div className="border-b border-2 w-20 "> </div>
-            </div>
-          ))}
+           return (
+
+            item.wrapper ? 
+             <ElectricWrapper key={index} > 
+            <SkillCards  item={item}/> 
+            </ElectricWrapper>
+           
+           : 
+          <SkillCards key={index} item={item}/> 
+            )
+            } )}
         </div>
       </div>
     </div>

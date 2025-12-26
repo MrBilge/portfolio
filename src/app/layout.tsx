@@ -25,6 +25,38 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} `}>
         {children}
+          <svg className="svg-container" width="0" height="0">
+  <defs>
+    <filter
+    id="electric"
+     x="-5%" y="-5%" width="110%" height="110%"
+      colorInterpolationFilters="sRGB"
+    >
+      <feTurbulence
+        type="turbulence"
+        baseFrequency="0.055"
+        numOctaves="5"
+        seed="12"
+        result="noise"
+      >
+        <animate
+          attributeName="baseFrequency"
+          dur="5.5s"
+          values="0.012;0.02;0.012"
+          repeatCount="indefinite"
+        />
+      </feTurbulence>
+
+      <feDisplacementMap
+        in="SourceGraphic"
+        in2="noise"
+        scale="15"
+        xChannelSelector="R"
+        yChannelSelector="G"
+      />
+    </filter>
+  </defs>
+</svg>
       </body>
     </html>
   );
