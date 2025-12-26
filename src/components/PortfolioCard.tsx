@@ -63,21 +63,23 @@ export default function PortfolioCard({
         </div>
       ) : (
         <div className="flex  transition-all duration-300 group-hover:scale-110">
-          <div className="flex flex-col gap-5  skew-x-10 w-full  md:w-1/2">
-            <div className="relative w-full aspect-[3/2] overflow-hidden -ml-5">
+          <div className="flex flex-col   skew-x-10 w-full  md:w-1/2">
+            <div className="w-full aspect-[3/2] overflow-hidden -ml-5">
               <Image
                 src={subImage1}
                 alt={title}
-                fill
-                className=" bg-gray-200 object-cover rounded-xl"
+                width={500}
+                height={500}
+                className="w-full h-auto bg-gray-200 object-cover rounded-xl"
               />
             </div>
-            <div className="relative w-full aspect-[3/2] overflow-hidden -ml-5">
+            <div className="w-full aspect-[3/2] overflow-hidden -ml-5">
               <Image
                 src={subImage2}
                 alt={title}
-                fill
-                className="  bg-gray-200 object-cover rounded-xl"
+                width={500}
+                height={400}
+                className="w-full h-auto bg-gray-200 object-cover rounded-xl"
               />
             </div>
           </div>
@@ -87,7 +89,8 @@ export default function PortfolioCard({
             <Image
               src={mainImage}
               alt={title}
-              fill
+              width={500}
+              height={300}
               className="w-full h-full object-cover rounded-xl"
             />
           </div>
