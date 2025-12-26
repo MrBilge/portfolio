@@ -75,7 +75,7 @@ export default function ContactForm() {
      :  
      
      (
-      <div  className={`w-full   space-y-20 lg:flex gap-5 transition-all duration-900 ${mounted ? "animate-fadeIn"  : "opacity-0"}  `}>   
+      <div  className={`w-full space-y-20 lg:flex gap-20 transition-all ease-out duration-700 ${mounted ? "opacity-100 "  : "opacity-0"}  `}>   
 
 
        <div className="lg:w-1/2">

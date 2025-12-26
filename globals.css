@@ -56,12 +56,14 @@
 
 html, body {
   overflow-x: hidden;
+   background-color: rgb(var(--ig-primary-background));
 }
 
 body {
 background-color: rgb(var(--ig-primary-background)); 
   color: #E0E6F1;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  min-height: 100%
 }
 
 .second-bg {
