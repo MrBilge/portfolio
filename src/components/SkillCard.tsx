@@ -19,8 +19,8 @@ export default function SkillCards({ item  } : SkillCardsProps) {
   return (
     <div
       className={`
-        shrink-0 w-[350px] space-y-5 py-10 px-10 rounded-xl
-        ${item.wrapper ? "bg-transparent" : "card-surface"}
+        shrink-0 w-[350px] card-surface space-y-5 py-10 px-10 rounded-xl
+       
       `}
     >
       {item.icon}

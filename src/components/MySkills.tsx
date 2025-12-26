@@ -2,7 +2,6 @@
 import { ArrowRightIcon, ArrowLeftIcon } from "lucide-react";
 import { useRef } from "react";
 import SkillCards from "./SkillCard";
-import { ElectricWrapper } from "./ElectricWrapper";
 
 export default function MySkills() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -27,7 +26,7 @@ const MySkills = [
     name: "Tailwind CSS",
     description:
       "Creating consistent and responsive user interfaces efficiently using utility-first CSS and modern design principles.",
-       wrapper : true
+     
   },
    {
     icon: <img src="/assets/react.png" alt="React" className="w-20 h-20" />,
@@ -122,19 +121,12 @@ const MySkills = [
           ref={scrollRef}
           className="flex  overflow-x-auto  gap-5 mt-10 w-full "
         >
-          {MySkills.map((item, index) => {
+          {MySkills.map((item, index) =>
 
-           return (
-
-            item.wrapper ? 
-             <ElectricWrapper key={index} > 
-            <SkillCards  item={item}/> 
-            </ElectricWrapper>
-           
-           : 
+         (
           <SkillCards key={index} item={item}/> 
-            )
-            } )}
+            ))}
+          
         </div>
       </div>
     </div>
