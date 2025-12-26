@@ -1,4 +1,4 @@
-export function ElectricWrapper({ children }  : any) {
+export function ElectricWrapper({ children }  :  { children : React.ReactNode}) {
   return (
     <div className="card-container" data-effect="↖️">
       <div className="inner-container">
