@@ -1,4 +1,21 @@
-export default function SkillCards({ item }: any) {
+import { ReactNode } from "react";
+
+interface SkillItem {
+  name: string;
+  description: string;
+  icon: ReactNode;
+  wrapper?: boolean;
+}
+
+
+interface SkillCardsProps {
+  item: SkillItem;
+}
+
+
+export default function SkillCards({ item  } : SkillCardsProps) {
+
+
   return (
     <div
       className={`
