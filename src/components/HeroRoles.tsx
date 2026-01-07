@@ -16,22 +16,20 @@ export default function HeroRoles() {
   useEffect(() => {
     const currentRole = roles[roleIndex];
 
-    // Yazma efekti
     if (charIndex < currentRole.length) {
       const timeout = setTimeout(() => {
         setText(currentRole.slice(0, charIndex + 1));
         setCharIndex((prev) => prev + 1);
-      }, 40); // yazma hızı
+      }, 40);
 
       return () => clearTimeout(timeout);
     }
 
-    // Yazı tamamlandıktan sonra bekleme
     const pause = setTimeout(() => {
       setCharIndex(0);
       setText("");
       setRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 1500); // tamamlandıktan sonra bekleme
+    }, 1500);
 
     return () => clearTimeout(pause);
   }, [charIndex, roleIndex]);
