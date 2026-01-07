@@ -9,7 +9,7 @@ type HeroProps = {
 export function Hero({ onScrollClick }: HeroProps) {
   return (
     <div className="flex h-screen w-full justify-between bg-[url('/assets/bilge.png')] bg-no-repeat px-10 md:px-20 xl:py-10  bg-center ">
-      <div className="flex flex-col   gap-5 sm:w-1/2 sm:mt-30  ">
+      <div className="flex flex-col justify-end md:justify-start  mb-30    gap-5 sm:w-1/2  sm:mt-30  ">
         <div className="hidden sm:block bg-white w-32 h-1"></div>
         <div className="block space-y-5 md:space-y-10">
           <h1 className="text-3xl md:text-3xl text-amber-100 font-sans sm:font-mono sm:tracking-wider">
