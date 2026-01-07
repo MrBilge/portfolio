@@ -37,14 +37,57 @@ export function Hero({ onScrollClick }: HeroProps) {
         </div>
       </div>
 
-      <div className="h-full  flex flex-col justify-center items-center space-y-2">
-        <h1 className="text-lg xl:text-2xl text-amber-100">Follow Me</h1>
-        <div className="flex w-max space-x-3 group text-md">
-          <Facebook className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
-          <Instagram className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
-          <Github className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
-          <Youtube className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
-          <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
+      <div className="hidden lg:flex flex-col w-1/2 md:w-1/3 mt-30 space-y-5 xl:space-y-10 text-xs">
+        <div className="space-y-2">
+          <h1 className="text-lg font-sans tracking-widest text-amber-100">
+            About Me
+          </h1>
+          <p className="text-sm xl:text-lg text-gray-300 font-sans tracking-widest">
+            I’m a developer who enjoys problem-solving and creating innovative
+            solutions. I write code to make technology more accessible and
+            closer to people.
+          </p>
+        </div>
+
+        <div className="flex flex-col space-y-2">
+          <h1 className="text-lg font-sans tracking-widest text-amber-100">
+            My Work
+          </h1>
+          <p className="text-sm xl:text-lg text-gray-300 font-sans tracking-widest">
+            A selection of projects where I focus on building clean, responsive,
+            and user-friendly interfaces. My work includes both personal
+            projects and internal applications developed for corporate
+            environments.
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <h1 className="text-lg font-sans tracking-widest text-amber-100">
+            Follow Me
+          </h1>
+          <div className="flex w-max space-x-3 group text-md">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 cursor-pointer" />
+            </a>
+            <a
+              href="https://www.github.com/MrBilge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 cursor-pointer" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ahmet-bilgehan-eybek-874762272/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 cursor-pointer" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
