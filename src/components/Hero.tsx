@@ -1,6 +1,6 @@
 import { ChevronDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Facebook, Instagram, Github, Youtube, Linkedin } from "lucide-react";
-import HeroRoles from "./HeroRoles";
+// import HeroRoles from "./HeroRoles";
 
 type HeroProps = {
   onScrollClick: () => void;
@@ -15,7 +15,7 @@ export function Hero({ onScrollClick }: HeroProps) {
           <h1 className="text-3xl md:text-3xl text-amber-100 font-sans sm:font-mono sm:tracking-wider">
             I&apos;m Bilgehan
             <span className="block mt-1">
-              <HeroRoles />
+              {/* <HeroRoles /> */}
             </span>
           </h1>
           <p className="text-sm xl:text-lg font-sans text-gray-300 tracking-widest bg-black/60 sm:bg-transparent p-2 rounded ">
