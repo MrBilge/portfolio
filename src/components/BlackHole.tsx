@@ -26,7 +26,7 @@ export default function BlackHole({ onEnter }: { onEnter: () => void }) {
     <div
       id="blackhole"
       className={`
-        relative overflow-hidden touch-none w-full h-full flex justify-center items-center
+        relative overflow-hidden  w-full h-full flex justify-center items-center
         transition-all duration-700 ease-out
         ${closing ? "opacity-0 scale-95" : "opacity-100 scale-100"}
       `}

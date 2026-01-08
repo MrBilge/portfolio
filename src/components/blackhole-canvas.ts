@@ -33,7 +33,7 @@ const maxorbit = Math.min(w, h) * 0.35;
   context.scale(dpi / 96, dpi / 96);
 
   /* ⭐ STAR COUNT (MOBİL / DESKTOP) */
-  const STAR_COUNT = w < 768 ? 600 : 4000;
+  const STAR_COUNT = w < 768 ? 600 : 1800;
    const INNER_RADIUS = 50
   class Star {
     orbital: number;
