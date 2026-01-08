@@ -1,42 +1,45 @@
-// "use client";
-// import { useEffect, useState } from "react";
+"use client";
 
-// const roles = [
-//   "Modern Frontend Developer",
-//   "Legacy UI Developer",
-//   "React / Next.js Specialist",
-//   "ASP.NET MVC UI Engineer",
-// ];
+import { useEffect, useRef } from "react";
 
-// export default function HeroRoles() {
-//   const [roleIndex, setRoleIndex] = useState(0);
-//   const [charIndex, setCharIndex] = useState(0);
-//   const [text, setText] = useState("");
+const roles = [
+  "Modern Frontend Developer",
+  "Legacy UI Developer",
+  "React / Next.js Specialist",
+  "ASP.NET MVC UI Engineer",
+];
 
-//   useEffect(() => {
-//     const currentRole = roles[roleIndex];
+export default function HeroRoles() {
+  const spanRef = useRef<HTMLSpanElement | null>(null);
+  const roleIndexRef = useRef(0);
 
-//     if (charIndex < currentRole.length) {
-//       const timeout = setTimeout(() => {
-//         setText(currentRole.slice(0, charIndex + 1));
-//         setCharIndex((prev) => prev + 1);
-//       }, 40);
+  useEffect(() => {
+    if (!spanRef.current) return;
 
-//       return () => clearTimeout(timeout);
-//     }
+    let charIndex = 0;
+    let timeout: NodeJS.Timeout;
 
-//     const pause = setTimeout(() => {
-//       setCharIndex(0);
-//       setText("");
-//       setRoleIndex((prev) => (prev + 1) % roles.length);
-//     }, 1500);
+    const type = () => {
+      const role = roles[roleIndexRef.current];
 
-//     return () => clearTimeout(pause);
-//   }, [charIndex, roleIndex]);
+      spanRef.current!.textContent = role.slice(0, ++charIndex);
 
-//   return (
-//     <span className="block h-[2.2em] " aria-live="polite">
-//       {text}
-//     </span>
-//   );
-// }
+      if (charIndex < role.length) {
+        timeout = setTimeout(type, 60);
+      } else {
+        timeout = setTimeout(() => {
+          spanRef.current!.textContent = "";
+          charIndex = 0;
+          roleIndexRef.current = (roleIndexRef.current + 1) % roles.length;
+          type();
+        }, 1500);
+      }
+    };
+
+    type();
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return <span ref={spanRef} className="block h-[2.2em]" />;
+}
