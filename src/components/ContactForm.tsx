@@ -3,7 +3,7 @@ import { useState , useEffect } from "react";
 import { toast } from "sonner";
 import { ArrowRightIcon , ArrowDownIcon } from "@heroicons/react/24/solid";
 import { AddContact } from "@/app/api/contact/action";
-import BlackHole from "./BlackHole";
+// import BlackHole from "./BlackHole";
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -70,11 +70,7 @@ export default function ContactForm() {
 
      <> 
      
-     {!showForm ?  <BlackHole onEnter={() => setShowForm(true)} />
-     
-     :  
-     
-     (
+    
       <div  className={`w-full space-y-20 lg:flex gap-20 transition-all ease-out duration-700 ${mounted ? "opacity-100 "  : "opacity-0"}  `}>   
 
 
@@ -147,7 +143,7 @@ export default function ContactForm() {
     
     </div>
      
-     )  }
+  
     
 
 
