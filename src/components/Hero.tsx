@@ -9,17 +9,17 @@ type HeroProps = {
 export function Hero({ onScrollClick }: HeroProps) {
   return (
     <div className="flex h-screen w-full justify-between bg-[url('/assets/bilge.png')] bg-no-repeat px-10 md:px-20 xl:py-10  bg-center ">
-      <div className="flex flex-col justify-end md:justify-start  mb-30    gap-5 sm:w-1/2  sm:mt-30  ">
-        <div className="hidden sm:block bg-white w-32 h-1"></div>
+      <div className="flex flex-col justify-center md:justify-start  gap-5    lg:gap-20  sm:w-1/2  mt-20  xl:mt-30  ">
+        <div className="hidden xl:block bg-white w-32 h-1"></div>
         <div className="block space-y-5 md:space-y-10">
           <h1 className="text-3xl bg-black/60 sm:bg-transparent md:text-3xl text-amber-100 font-sans sm:font-mono sm:tracking-wider">
             I&apos;m Bilgehan
-            <span className="block mt-1">
+            <span className="block mt-3 w-5/6">
               {/* <HeroRoles />  */}
               Modern & Legacy / Frontend Developer
             </span>
           </h1>
-          <p className="text-sm xl:text-lg font-sans text-gray-300 tracking-widest bg-black/60 sm:bg-transparent p-2 rounded ">
+          <p className="text-sm xl:text-lg font-sans text-gray-300 tracking-widest bg-black/30 xl:bg-transparent p-2 rounded ">
             I build modern, fast, and user-friendly web experiences using
             Next.js,
             <span className="block mt-2">
@@ -32,7 +32,7 @@ export function Hero({ onScrollClick }: HeroProps) {
         <div
           style={{ borderRadius: "50%" }}
           onClick={onScrollClick}
-          className="w-max p-4 md:p-6 xl:p-10  sm:bg-blue-600 cursor-pointer transition-all duration-300 hover:scale-75"
+          className="w-max p-4 md:p-6 xl:p-10  sm:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-75"
         >
           <ChevronDownIcon className="h-9 xl:w-9 animate-bounce-large" />
         </div>
