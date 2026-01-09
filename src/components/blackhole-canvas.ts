@@ -5,7 +5,7 @@ export function blackhole(selector: string) {
   const h = container.offsetHeight;
   const w = container.offsetWidth;
 
-const maxorbit = Math.min(w, h) * 0.35;
+  const maxorbit = Math.min(w, h) * 0.35;
   const centery = h / 2;
   const centerx = w / 2;
 
@@ -34,7 +34,7 @@ const maxorbit = Math.min(w, h) * 0.35;
 
   /* ⭐ STAR COUNT (MOBİL / DESKTOP) */
   const STAR_COUNT = w < 768 ? 600 : 1800;
-   const INNER_RADIUS = 50
+  const INNER_RADIUS = 50;
   class Star {
     orbital: number;
     currentOrbital: number;
@@ -49,8 +49,7 @@ const maxorbit = Math.min(w, h) * 0.35;
     exploding = false;
 
     constructor() {
-     this.orbital =
-  INNER_RADIUS + Math.random() * (maxorbit - INNER_RADIUS);
+      this.orbital = INNER_RADIUS + Math.random() * (maxorbit - INNER_RADIUS);
 
       this.currentOrbital = this.orbital;
 
@@ -73,7 +72,7 @@ const maxorbit = Math.min(w, h) * 0.35;
         this.vy *= 0.98;
       } else {
         const target = collapse
-          ? this.orbital * 2.9   // 🔹 SADECE %10 YAKLAŞMA
+          ? this.orbital * 2.9 // 🔹 SADECE %10 YAKLAŞMA
           : this.orbital;
 
         this.currentOrbital += (target - this.currentOrbital) * 0.05;
@@ -82,22 +81,21 @@ const maxorbit = Math.min(w, h) * 0.35;
         this.x = centerx + Math.cos(this.angle) * this.currentOrbital;
         this.y = centery + Math.sin(this.angle) * this.currentOrbital;
       }
-          if(context === null) return
+      if (context === null) return;
       context.beginPath();
-   context.save();
-context.translate(this.x, this.y);
-context.rotate(Math.PI / 4);
-context.fillStyle = this.color;
-context.fillRect(-0.8, -0.8, 1.6, 1.6);
-context.restore();
+      context.save();
+      context.translate(this.x, this.y);
+      context.rotate(Math.PI / 4);
+      context.fillStyle = this.color;
+      context.fillRect(-0.8, -0.8, 1.6, 1.6);
+      context.restore();
 
       context.fill();
     }
   }
-  
+
   const centerHover = container.querySelector(".centerHover") as HTMLElement;
 
-  /* 🧲 HOVER */
   centerHover?.addEventListener("mouseover", () => {
     if (!expanse) collapse = true;
   });
@@ -106,7 +104,6 @@ context.restore();
     collapse = false;
   });
 
-  /* 💥 CLICK → PATLAMA + STOP */
   centerHover?.addEventListener("click", () => {
     expanse = true;
     collapse = false;
@@ -127,7 +124,7 @@ context.restore();
   function loop() {
     rafId = requestAnimationFrame(loop);
     currentTime = (Date.now() - startTime) / 50;
-       if(context === null) return
+    if (context === null) return;
     context.clearRect(0, 0, w, h);
     stars.forEach((s) => s.draw());
   }

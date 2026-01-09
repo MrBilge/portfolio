@@ -15,8 +15,8 @@ export function Hero({ onScrollClick }: HeroProps) {
           <h1 className="text-3xl bg-black/60 sm:bg-transparent md:text-3xl text-amber-100 font-sans sm:font-mono sm:tracking-wider">
             I&apos;m Bilgehan
             <span className="block mt-1">
-               {/* <HeroRoles />  */}
-               Modern & Legacy / Frontend Developer
+              {/* <HeroRoles />  */}
+              Modern & Legacy / Frontend Developer
             </span>
           </h1>
           <p className="text-sm xl:text-lg font-sans text-gray-300 tracking-widest bg-black/60 sm:bg-transparent p-2 rounded ">
@@ -39,7 +39,7 @@ export function Hero({ onScrollClick }: HeroProps) {
       </div>
 
       <div className="hidden lg:flex flex-col w-1/2 md:w-1/3 mt-30 space-y-5 xl:space-y-10 text-xs">
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <h1 className="text-lg font-sans tracking-widest text-amber-100">
             About Me
           </h1>
@@ -48,21 +48,9 @@ export function Hero({ onScrollClick }: HeroProps) {
             solutions. I write code to make technology more accessible and
             closer to people.
           </p>
-        </div>
+        </div> */}
 
-        <div className="flex flex-col space-y-2">
-          <h1 className="text-lg font-sans tracking-widest text-amber-100">
-            My Work
-          </h1>
-          <p className="text-sm xl:text-lg text-gray-300 font-sans tracking-widest">
-            A selection of projects where I focus on building clean, responsive,
-            and user-friendly interfaces. My work includes both personal
-            projects and internal applications developed for corporate
-            environments.
-          </p>
-        </div>
-
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <h1 className="text-lg font-sans tracking-widest text-amber-100">
             Follow Me
           </h1>
@@ -89,7 +77,7 @@ export function Hero({ onScrollClick }: HeroProps) {
               <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 cursor-pointer" />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
