@@ -9,12 +9,12 @@ type HeroProps = {
 export function Hero({ onScrollClick }: HeroProps) {
   return (
     <div className="flex h-screen w-full justify-between bg-[url('/assets/bilge.png')] bg-no-repeat px-10 md:px-20 xl:py-10  bg-center ">
-      <div className="flex flex-col justify-center lg:justify-start  gap-5    lg:gap-20  sm:w-1/2   lg:mt-20   xl:mt-30  ">
+      <div className="flex flex-col justify-center lg:justify-start  gap-5    lg:gap-20  sm:w-1/2c mt-0   lg:mt-20  xl:mt-30  ">
         <div className="hidden xl:block bg-white w-32 h-1"></div>
-        <div className="block space-y-5 md:space-y-10">
-          <h1 className="text-3xl bg-black/60 sm:bg-transparent md:text-3xl text-amber-100 font-sans sm:font-mono sm:tracking-wider">
+        <div className="hidden md:block space-y-5 md:space-y-10">
+          <h1 className="text-3xl bg-black/60 lg:bg-transparent md:text-3xl text-amber-100 font-sans sm:font-mono sm:tracking-wider">
             I&apos;m Bilgehan
-            <span className="block mt-3   w-5/6 xl:w-max">
+            <span className="block mt-3   sm:w-2/3 xl:w-max">
               {/* <HeroRoles />  */}
               Modern & Legacy / Frontend Developer
             </span>
@@ -32,7 +32,7 @@ export function Hero({ onScrollClick }: HeroProps) {
         <div
           style={{ borderRadius: "50%" }}
           onClick={onScrollClick}
-          className="w-max p-4 md:p-6 xl:p-10  sm:bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-75"
+          className=" hidden md:block w-max p-4 md:p-6 xl:p-10  bg-gray-900 cursor-pointer transition-all duration-300 hover:scale-75"
         >
           <ChevronDownIcon className="h-9 xl:w-9 animate-bounce-large" />
         </div>
