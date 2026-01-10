@@ -296,9 +296,8 @@ background-color: rgb(var(--ig-primary-background));
   border-radius: 9999px;
   filter: blur(60px);
   mix-blend-mode: screen;
-}
+} 
 
-/* MOR – sol üst (KAREYE YAKIN) */
 .glow-purple {
   background: rgb(250, 90, 255);
   top: 120px;
@@ -306,7 +305,6 @@ background-color: rgb(var(--ig-primary-background));
   animation: purplePulse 5s infinite ease-in-out;
 }
 
-/* MAVİ – sağ alt (KAREYE YAKIN) */
 .glow-blue {
   background: rgb(0, 26, 255);
   bottom: 120px;
