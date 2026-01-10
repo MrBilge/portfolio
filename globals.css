@@ -287,3 +287,43 @@ background-color: rgb(var(--ig-primary-background));
 .centerHover:hover span::after {
   background-color: #fff;
 }
+
+
+.glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 9999px;
+  filter: blur(60px);
+  mix-blend-mode: screen;
+}
+
+/* MOR – sol üst (KAREYE YAKIN) */
+.glow-purple {
+  background: rgb(250, 90, 255);
+  top: 120px;
+  left: 120px;
+  animation: purplePulse 5s infinite ease-in-out;
+}
+
+/* MAVİ – sağ alt (KAREYE YAKIN) */
+.glow-blue {
+  background: rgb(0, 26, 255);
+  bottom: 120px;
+  right: 120px;
+  animation: bluePulse 5s infinite ease-in-out;
+}
+
+
+@keyframes purplePulse {
+  0%   { opacity: 0.3; transform: scale(0.95); }
+  50%  { opacity: 0.75; transform: scale(1.05); }
+  100% { opacity: 0.3; transform: scale(0.95); }
+}
+
+@keyframes bluePulse {
+  0%   { opacity: 0.75; transform: scale(1.05); }
+  50%  { opacity: 0.3; transform: scale(0.95); }
+  100% { opacity: 0.75; transform: scale(1.05); }
+}
+
