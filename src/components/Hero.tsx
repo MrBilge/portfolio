@@ -38,7 +38,7 @@ export function Hero({ onScrollClick }: HeroProps) {
         </div>
       </div>
 
-      <div className="hidden md:flex flex-col w-1/2 md:w-1/3  lg:mt-0 lg:mb-90  space-y-5 xl:space-y-10 text-xs">
+      <div className="hidden md:flex flex-col w-1/2 md:w-1/3  lg:mt-0  mt-30  lg:mb-90  space-y-5 xl:space-y-10 text-xs">
 
 
    <div className="relative w-full h-full flex items-center justify-center">
