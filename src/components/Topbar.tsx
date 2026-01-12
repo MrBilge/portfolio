@@ -34,12 +34,30 @@ export default function Topbar({ onScrollClick, refs }: TopbarProps) {
     <div className="sticky top-0  z-50 flex justify-between second-bg px-5  md:px-10">
       <Logo />
 
-      <div className="hidden lg:flex justify-between gap-10 items-center  font-serif">
+      <div className="group hidden lg:flex justify-between gap-10 items-center text-white/50 font-serif">
         {menuItem.map((item, index) => (
           <p
-            onClick={() => onScrollClick(item.ref)}
-            className="cursor-pointer"
             key={index}
+            onClick={() => onScrollClick(item.ref)}
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              const x = e.clientX < rect.left + rect.width / 2 ? -1 : 1;
+              e.currentTarget.style.transform = `translateX(${
+                x * 6
+              }px) translateY(-4px)`;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translate(0,0)";
+            }}
+            className="
+        transition-all duration-300
+        text-white/40
+       cursor-pointer
+        group-hover:opacity-40
+        hover:!opacity-100 hover:text-white hover:scale-110
+
+        hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.6)]
+      "
           >
             {item.name}
           </p>

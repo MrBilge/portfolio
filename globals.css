@@ -325,3 +325,6 @@ background-color: rgb(var(--ig-primary-background));
   100% { opacity: 0.75; transform: scale(1.05); }
 }
 
+.group:hover p:not(:hover) {
+  filter: blur(0.5px);
+}
