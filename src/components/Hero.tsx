@@ -10,7 +10,7 @@ type HeroProps = {
 
 export function Hero({ onScrollClick }: HeroProps) {
   return (
-    <div className="sm:flex-reverse lg:flex bg-black/40  w-full min-h-dvh justify-between bg-[url('/assets/bilge.png')] bg-no-repeat px-5 lg:px-15  bg-center md:bg-top ">
+    <div className="sm:flex-reverse lg:flex bg-black/40   w-full min-h-dvh justify-between bg-[url('/assets/bilge.png')] bg-no-repeat px-5 lg:px-15  bg-center md:bg-top ">
       <div className="flex flex-col justify-center  lg:gap-20  sm:w-2/5 xl:w-1/2  mt-0 lg:mt-20  2xl:mt-30 ">
         <div className="hidden xl:block  w-36 h-[10px]  bg-white/10 rounded-full"></div>
         <div className="hidden xl:block space-y-5 md:space-y-10">
