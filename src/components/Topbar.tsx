@@ -31,10 +31,10 @@ export default function Topbar({ onScrollClick, refs }: TopbarProps) {
     },
   ];
   return (
-    <div className="sticky top-0  z-50 flex justify-between second-bg px-5  md:px-10">
+    <div className="sticky top-0  z-50 flex justify-between bg-black px-5  md:px-10">
       <Logo />
 
-      <div className="group hidden lg:flex justify-between gap-10 items-center text-white/50 font-serif">
+      <div className="group hidden lg:flex justify-between gap-10 items-center text-white/70 font-serif">
         {menuItem.map((item, index) => (
           <p
             key={index}
@@ -51,11 +51,10 @@ export default function Topbar({ onScrollClick, refs }: TopbarProps) {
             }}
             className="
         transition-all duration-300
-        text-white/40
+      
        cursor-pointer
         group-hover:opacity-40
         hover:!opacity-100 hover:text-white hover:scale-110
-
         hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.6)]
       "
           >

@@ -57,7 +57,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-color: rgb(var(--ig-primary-background));
+  background-color: black;
   z-index: -1;
 }
 
@@ -67,7 +67,7 @@ html, body {
 }
 
 body {
-background-color: rgb(var(--ig-primary-background)); 
+background-color: black; 
   color: #E0E6F1;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   min-height: 100%

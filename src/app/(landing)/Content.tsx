@@ -9,6 +9,7 @@ import MyPortfolio from "@/components/MyPortfolio";
 import Footer from "@/components/Footer";
 import Topbar from "@/components/Topbar";
 import AnimateView from "@/components/AnimateView";
+import NewSection from "@/components/NewSection";
 
 export default function Content() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -51,6 +52,12 @@ export default function Content() {
       <div ref={portfolioRef}>
         <AnimateView>
           <MyPortfolio />
+        </AnimateView>
+      </div>
+
+      <div>
+        <AnimateView>
+          <NewSection />
         </AnimateView>
       </div>
 

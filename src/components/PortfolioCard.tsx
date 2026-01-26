@@ -13,7 +13,7 @@ export default function PortfolioCard({
   mobileCard,
 }: portfoliaCardProps) {
   return (
-    <div className="group rounded-2xl  bg-gray-800 transition-all duration-500 lg:hover:scale-105 overflow-hidden space-y-5 ">
+    <div className="group rounded-2xl  bg-white/4 transition-all duration-500 lg:hover:scale-105 overflow-hidden space-y-5 ">
       <div className="px-5 xl:px-10 py-5">
         <div className="flex justify-end gap-2">
           <button className="bg-gray-200 p-2 rounded-2xl text-xs text-gray-700  font-semibold">
