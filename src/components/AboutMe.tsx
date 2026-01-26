@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <div className="h-screen  flex flex-col -mt-3  bg-white/3   space-y-5 justify-center items-center md:flex-row md:justify-between gap-5 sm:gap-10  px-5 lg:px-40 text-white/60  ">
+    <div className="h-screen  flex flex-col -mt-22 md:m-0   bg-white/2   space-y-5 justify-center items-center md:flex-row md:justify-between gap-5 sm:gap-10  px-5 lg:px-40 text-white/60  ">
       <div className="flex flex-col space-y-5 md:w-1/2">
         <h3 className="text-xl">
           <span className="text-amber-300 text-3xl">{`//`}</span> About Me
