@@ -86,27 +86,23 @@ const COLS = 12;
 const CARD_CLASS =
   "relative flex justify-center items-center h-28 w-28   rounded-2xl border border-white/10 bg-white/3  lg:backdrop-blur-sm transition-all duration-500 hover:scale-85 lg:overflow-visible";
 
-export default function SocialMediaCards() {
+export default function ConceptBased() {
   return (
     <div className="relative overflow-hidden">
-      <SmallGrid />
-      <LargeGrid />
+      <SmallGridCards />
+      <LargeGridCards />
 
       <div className="hidden lg:block pointer-events-none absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black to-transparent" />
       <div className="hidden lg:block pointer-events-none absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black to-transparent" />
       <div className="hidden lg:block pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent" />
-      <div className="hidden lg:block pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent" />
+      <div className="hidden lg:block pointer-events-none absolute inset-x-0 bottom-0   h-[330px] bg-gradient-to-t from-black to-transparent" />
     </div>
   );
 }
 
-const LargeGrid = () => {
+const LargeGridCards = () => {
   return (
-    <div
-      className="hidden lg:grid grid-cols-12  lg:gap-3 lg:gap-x-30 xl:gap-3 
- 
-  mx-auto relative z-0"
-    >
+    <div className="hidden lg:grid grid-cols-12  lg:gap-3 lg:gap-x-30 xl:gap-3  relative z-0">
       {Array.from({ length: 48 }).map((_, i) => {
         const card = cards.find((c) => c.col === i);
         const rowIndex = Math.floor(i / COLS);
@@ -139,7 +135,7 @@ const LargeGrid = () => {
   );
 };
 
-const SmallGrid = () => {
+const SmallGridCards = () => {
   return (
     <div className=" grid grid-cols-3 sm:grid-cols-4  gap-4  lg:hidden">
       {cards.map((card) => (

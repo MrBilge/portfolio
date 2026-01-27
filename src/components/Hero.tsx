@@ -1,7 +1,7 @@
 import { ChevronDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 import HeroSkillCard from "./HeroSkilsCard";
-import SocialMediaCards from "./SocialMediaCards";
+import SocialMediaCards from "./ConceptBased";
 //  import HeroRoles from "./HeroRoles";
 
 type HeroProps = {

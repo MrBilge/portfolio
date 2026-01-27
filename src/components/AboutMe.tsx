@@ -23,7 +23,7 @@ export default function AboutMe() {
           </p>
         </div> */}
       </div>
-      <div className="flex flex-col space-y-5 sm:w-1/2 ">
+      <div className="flex flex-col space-y-5 sm:w-1/2 xl:w-1/3">
         <div className="flex justify-between ">
           <div className="flex space-x-2">
             <p className="text-6xl">3 </p>
