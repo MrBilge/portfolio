@@ -1,4 +1,5 @@
 export type portfoliaCardProps = {
+  href?: string;
   title: string;
   description: string;
   primaryButton: string;

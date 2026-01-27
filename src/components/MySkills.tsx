@@ -9,12 +9,7 @@ export default function MySkills() {
   const MySkills = [
     {
       icon: (
-        <img
-          loading="lazy"
-          src="/assets/html5.png"
-          alt="HTML & CSS"
-          className="w-20 h-20"
-        />
+        <img src="/assets/html5.png" alt="HTML & CSS" className="w-20 h-20" />
       ),
       name: "HTML & CSS",
       description:
@@ -22,22 +17,22 @@ export default function MySkills() {
     },
 
     {
-      icon: (
-        <img
-          loading="lazy"
-          src="/assets/js.png"
-          alt="JavaScript"
-          className="w-20 h-20"
-        />
-      ),
+      icon: <img src="/assets/js.png" alt="JavaScript" className="w-20 h-20" />,
       name: "JavaScript (ES6+)",
       description:
         "Developing dynamic and interactive web features using modern JavaScript practices and clean, maintainable code.",
     },
     {
       icon: (
+        <img src="/assets/typeScript.png" alt="jQuery" className="w-20 h-20" />
+      ),
+      name: "TypeScript",
+      description:
+        "Building scalable and maintainable applications with static typing, strong tooling, and improved developer experience across modern frontend projects.",
+    },
+    {
+      icon: (
         <img
-          loading="lazy"
           src="/assets/tailwind.png"
           alt="Tailwind CSS"
           className="w-20 h-20"
@@ -48,14 +43,7 @@ export default function MySkills() {
         "Creating consistent and responsive user interfaces efficiently using utility-first CSS and modern design principles.",
     },
     {
-      icon: (
-        <img
-          loading="lazy"
-          src="/assets/react.png"
-          alt="React"
-          className="w-20 h-20"
-        />
-      ),
+      icon: <img src="/assets/react.png" alt="React" className="w-20 h-20" />,
       name: "React",
       description:
         "Building reusable components and interactive user interfaces with a focus on performance, scalability, and maintainability.",
@@ -63,12 +51,7 @@ export default function MySkills() {
     },
     {
       icon: (
-        <img
-          loading="lazy"
-          src="/assets/nextjs.png"
-          alt="Next.js"
-          className="w-20 h-20"
-        />
+        <img src="/assets/nextjs.png" alt="Next.js" className="w-20 h-20" />
       ),
       name: "Next.js",
       description:
@@ -77,14 +60,7 @@ export default function MySkills() {
     },
 
     {
-      icon: (
-        <img
-          loading="lazy"
-          src="/assets/jquery.png"
-          alt="jQuery"
-          className="w-20 h-20"
-        />
-      ),
+      icon: <img src="/assets/jquery.png" alt="jQuery" className="w-20 h-20" />,
       name: "jQuery (Legacy UI & AJAX)",
       description:
         "Maintaining and enhancing legacy interfaces with DOM manipulation, event handling, and AJAX-based workflows.",
@@ -92,7 +68,6 @@ export default function MySkills() {
     {
       icon: (
         <img
-          loading="lazy"
           src="/assets/aspnet.png"
           alt="ASP.NET MVC / Razor Pages"
           className="w-24 h-20"
@@ -106,7 +81,6 @@ export default function MySkills() {
     {
       icon: (
         <img
-          loading="lazy"
           src="/assets/expo.png"
           alt="React Native Expo"
           className="w-20 h-20"
@@ -117,14 +91,7 @@ export default function MySkills() {
         "Building cross-platform mobile applications with reusable components and a streamlined development workflow.",
     },
     {
-      icon: (
-        <img
-          loading="lazy"
-          src="/assets/figma.png"
-          alt="Figma"
-          className="w-14 h-20"
-        />
-      ),
+      icon: <img src="/assets/figma.png" alt="Figma" className="w-14 h-20" />,
       name: "Figma",
       description:
         "Designing and translating UI concepts into clean, developer-friendly components with attention to layout and usability.",
@@ -132,7 +99,6 @@ export default function MySkills() {
     {
       icon: (
         <img
-          loading="lazy"
           src="/assets/github.png"
           alt="Git & GitHub"
           className="w-32 h-20"

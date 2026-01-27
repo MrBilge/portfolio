@@ -29,6 +29,7 @@ export default function MyPortfolio() {
         </div>
         <div className="w-full lg:w-1/2 flex flex-col gap-10 lg:gap-20  ">
           <PortfolioCard
+            href="https://greendrive.com.tr/"
             primaryButton="React"
             secondaryButton="Web Development"
             title="Green Drive"
@@ -39,6 +40,7 @@ export default function MyPortfolio() {
             subImage2="/assets/greenyeni.PNG"
           />
           <PortfolioCard
+            href="https://forsale.godaddy.com/forsale/sarjnoktasi.com?utm_source=TDFS_BINNS2&utm_medium=parkedpages&utm_campaign=x_corp_tdfs-binns2_base&traffic_type=TDFS_BINNS2&traffic_id=binns2&"
             primaryButton="Next Js"
             secondaryButton="Web Development"
             title="Şarj Noktası"

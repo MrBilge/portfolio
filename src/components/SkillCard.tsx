@@ -21,8 +21,7 @@ export default function SkillCards({ item }: SkillCardsProps) {
     >
       {item.icon}
       <p className="text-2xl font-semibold">{item.name}</p>
-      <p className="font-playfair">{item.description}</p>
-      <div className="border-b border-2 w-20" />
+      <p className=" text-sm text-white/50 tracking-wide">{item.description}</p>
     </div>
   );
 }
