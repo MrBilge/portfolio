@@ -5,11 +5,11 @@ export default function AboutMe() {
         <h3 className="text-xl">
           <span className="text-amber-300 text-3xl">{`//`}</span> About Me
         </h3>
-        <div className="flex flex-col space-y-10">
-          <h1 className="text-4xl font-semibold ">
+        <div className="flex flex-col space-y-4 lg:space-y-10">
+          <h1 className="text-lg xl:text-4xl font-semibold ">
             Front-End Developer Focused on Modern Web Experiences
           </h1>
-          <p className="font-sans">
+          <p className="text-sm lg:text-lg hidden lg:block font-sans">
             I’m passionate about building clean, responsive, and user-friendly
             websites. With a strong eye for detail and a love for learning, I
             constantly strive to improve both my code and user experience. I
@@ -23,7 +23,7 @@ export default function AboutMe() {
           </p>
         </div> */}
       </div>
-      <div className="flex flex-col space-y-5 sm:w-1/2 md:w-1/3">
+      <div className="flex flex-col space-y-5 sm:w-1/2 ">
         <div className="flex justify-between ">
           <div className="flex space-x-2">
             <p className="text-6xl">3 </p>
