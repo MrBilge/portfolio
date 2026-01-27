@@ -104,26 +104,26 @@ const LargeGridCards = () => {
   return (
     <div className="hidden lg:grid grid-cols-12  lg:gap-3 lg:gap-x-30 xl:gap-3  relative z-0">
       {Array.from({ length: 48 }).map((_, i) => {
-        const card = cards.find((c) => c.col === i);
+        const iconCard = cards.find((c) => c.col === i);
         const rowIndex = Math.floor(i / COLS);
         const isEvenRow = rowIndex % 2 === 1;
 
         return (
           <div key={i}>
             <div
-              className={`${CARD_CLASS} group ${
+              className={`${CARD_CLASS} group  ${
                 isEvenRow
                   ? "lg:-translate-x-25 xl:translate-x-15"
                   : "lg:-translate-x-40 xl:-translate-x-0"
               }`}
             >
-              {card && (
+              {iconCard && (
                 <>
                   <div
-                    className={`absolute -inset-6 rounded-3xl blur-2xl opacity-0 transition-opacity duration-500 ${card.glow} group-hover:opacity-100`}
+                    className={`absolute -inset-6 rounded-3xl blur-2xl opacity-0 transition-opacity duration-500 ${iconCard.glow} group-hover:opacity-100`}
                   />
-                  <card.icon
-                    className={`relative z-10 w-12 h-12 ${card.color}`}
+                  <iconCard.icon
+                    className={`relative z-10 w-12 h-12 ${iconCard.color}`}
                   />
                 </>
               )}
