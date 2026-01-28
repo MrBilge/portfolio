@@ -18,7 +18,7 @@ export default function Footer() {
                 A. Bilgehan Eybek
               </h1>
               <h2 className="tracking-widest font-serif w-max">
-                Modern & Legacy UI Engineer
+                Modern & Legacy UI
               </h2>
               <div className="flex mt-2 w-max space-x-3 group">
                 <a
