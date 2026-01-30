@@ -19,7 +19,7 @@ before:pointer-events-none "
           <div className=" flex  flex-col justify-center text-sm text-white/60  font-sans  ">
             <div className="space-y-3 ">
               <h1 className=" w-max">A. Bilgehan Eybek</h1>
-              <h2 className="w-max">Modern & Legacy UI</h2>
+              <h2 className="w-max">Modern & Legacy Frontend</h2>
               <div className="flex mt-2 w-max space-x-3 group">
                 <a
                   href="https://www.instagram.com/"
