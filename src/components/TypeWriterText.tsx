@@ -18,7 +18,6 @@ export default function Typewriter() {
     const timeout = setTimeout(
       () => {
         if (!isDeleting) {
-          // YAZMA
           const next = currentText.slice(0, displayed.length + 1);
           setDisplayed(next);
 
@@ -35,7 +34,7 @@ export default function Typewriter() {
           }
         }
       },
-      isDeleting ? 50 : 50,
+      isDeleting ? 40 : 70,
     );
 
     return () => clearTimeout(timeout);
