@@ -16,7 +16,7 @@ before:pointer-events-none "
             <Avatar />
           </div>
 
-          <div className=" flex  flex-col justify-center text-sm  tracking-widest">
+          <div className=" flex  flex-col justify-center text-sm text-white/60  font-sans  ">
             <div className="space-y-3 ">
               <h1 className=" w-max">A. Bilgehan Eybek</h1>
               <h2 className="w-max">Modern & Legacy UI</h2>
@@ -26,30 +26,29 @@ before:pointer-events-none "
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Instagram className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 cursor-pointer" />
+                  <Instagram className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:text-white hover:scale-110 cursor-pointer" />
                 </a>
                 <a
                   href="https://www.github.com/MrBilge"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {" "}
-                  <Github className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
+                  <Github className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:text-white hover:scale-110 hover:translate-y2 cursor-pointer" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/ahmet-bilgehan-eybek-874762272//"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:scale-110 hover:translate-y2 cursor-pointer" />
+                  <Linkedin className="w-6 h-6 transition-all duration-300 group-hover:opacity-40 hover:opacity-100 hover:text-white hover:scale-110 hover:translate-y2 cursor-pointer" />
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div className=" flex flex-col justify-center items-center space-y-5">
-          <h1 className=" group  font-serif tracking-wide ">
+        <div className="flex flex-col justify-center items-center space-y-5">
+          <h1 className="group  font-serif tracking-wide ">
             Get in touch
             <ArrowRightIcon className="inline w-10 h-10 text-blue-600 ml-2 transition-all duration-300 group-hover:translate-x-3" />
           </h1>
@@ -84,8 +83,8 @@ before:pointer-events-none "
       <div className="relative border-t border-white/10 mt-10 pt-6 overflow-hidden">
         {/* moving light */}
         <div
-          className="absolute top-0 left-[-30%] w-[30%] h-[1px] 
-                  bg-gradient-to-r from-transparent via-white/60 to-transparent
+          className="absolute top-0  w-[30%] h-[1px] 
+                  bg-gradient-to-r  via-white/60
                   footer-light"
         />
 
