@@ -1,9 +1,6 @@
 import { ChevronDownIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 import HeroSkillCard from "./HeroSkilsCard";
-import TypewriterText from "./TypeWriterText";
-
-//  import HeroRoles from "./HeroRoles";
 
 type HeroProps = {
   onScrollClick: () => void;
@@ -17,7 +14,9 @@ export function Hero({ onScrollClick }: HeroProps) {
         <div className="hidden xl:block space-y-5 md:space-y-10">
           <h1 className="text-3xl bg-black/60 lg:bg-transparent md:text-3xl text-amber-100 font-sans sm:font-mono ">
             I&apos;m Bilgehan
-            <TypewriterText />
+            <span className=" block mt-5 w-3/4">
+              Frontend Developer - Modern & Legacy
+            </span>
           </h1>
           <p className="text-md  font-sans text-white/50 tracking-widest  lg:w-4/5     ">
             I build modern, fast, and user-friendly web experiences using
