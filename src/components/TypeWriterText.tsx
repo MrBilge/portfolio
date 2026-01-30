@@ -1,48 +1,55 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Typewriter() {
-  const texts = [
-    "Frontend Developer - Modern & Legacy",
-    "Modern Web Specialist",
-    "React / Next.js Engineer",
-    "Modern & Legacy Systems Developer",
-  ];
-
-  const [textIndex, setTextIndex] = useState(0);
-  const [displayed, setDisplayed] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
+  const el = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
-    const currentText = texts[textIndex];
+    const texts = [
+      "Frontend Developer - Modern & Legacy",
+      "Modern Web Specialist",
+      "React / Next.js Engineer",
+      "Modern & Legacy Systems Developer",
+    ];
 
-    const timeout = setTimeout(
-      () => {
-        if (!isDeleting) {
-          const next = currentText.slice(0, displayed.length + 1);
-          setDisplayed(next);
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-          if (next === currentText) {
-            setTimeout(() => setIsDeleting(true), 1000);
-          }
+    const type = () => {
+      if (!el.current) return;
+
+      const current = texts[textIndex];
+
+      // Yazıyı güncelle
+      el.current.textContent = current.substring(0, charIndex);
+
+      if (!isDeleting) {
+        if (charIndex < current.length) {
+          charIndex++;
         } else {
-          const next = currentText.slice(0, displayed.length - 1);
-          setDisplayed(next);
-
-          if (next === "") {
-            setIsDeleting(false);
-            setTextIndex((prev) => (prev + 1) % texts.length);
-          }
+          // Yazı bitti bekle
+          isDeleting = true;
+          setTimeout(type, 1000);
+          return;
         }
-      },
-      isDeleting ? 40 : 70,
-    );
+      } else {
+        if (charIndex > 0) {
+          charIndex--;
+        } else {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % texts.length;
+        }
+      }
 
-    return () => clearTimeout(timeout);
-  }, [displayed, isDeleting, textIndex]);
+      setTimeout(type, isDeleting ? 35 : 60 + Math.random() * 60);
+    };
+
+    type();
+  }, []);
 
   return (
     <span className="block mt-5 w-3/4 text-3xl font-medium">
-      {displayed}
+      <span ref={el}></span>
       <span className="animate-pulse">|</span>
     </span>
   );
