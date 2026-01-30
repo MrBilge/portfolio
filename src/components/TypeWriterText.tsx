@@ -35,7 +35,7 @@ export default function Typewriter() {
           }
         }
       },
-      isDeleting ? 40 : 20,
+      isDeleting ? 50 : 50,
     );
 
     return () => clearTimeout(timeout);
