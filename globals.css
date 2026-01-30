@@ -1,6 +1,4 @@
 @import "tailwindcss";
-
-
 @tailwind utilities;
 
 
@@ -327,4 +325,17 @@ background-color: black;
 
 .group:hover p:not(:hover) {
   filter: blur(0.5px);
+}
+
+@keyframes footer-light {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.footer-light {
+  animation: footer-light 4s linear infinite;
 }
