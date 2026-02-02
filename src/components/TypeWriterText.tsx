@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
 
 const TEXTS = [
   "Frontend Developer - Modern & Legacy",
@@ -11,60 +12,79 @@ const TEXTS = [
 
 export default function Typewriter() {
   const el = useRef<HTMLSpanElement | null>(null);
+  const timeoutRef = useRef<number | null>(null);
+
+  const textIndex = useRef(0);
+  const charIndex = useRef(0);
+  const isDeleting = useRef(false);
+
+  const { ref: heroRef, inView } = useInView({
+    threshold: 0.2,
+  });
 
   useEffect(() => {
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let timeoutId: number;
+    if (!inView) {
+      // Hero görünmüyorsa tamamen dur
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+      return;
+    }
 
     const type = () => {
-      if (!el.current) return;
+      if (!el.current || !inView) return;
 
-      const current = TEXTS[textIndex];
-      el.current.textContent = current.slice(0, charIndex);
+      const current = TEXTS[textIndex.current];
+      el.current.textContent = current.slice(0, charIndex.current);
 
-      if (!isDeleting) {
-        if (charIndex < current.length) {
-          charIndex++;
+      if (!isDeleting.current) {
+        if (charIndex.current < current.length) {
+          charIndex.current++;
         } else {
-          timeoutId = window.setTimeout(() => {
-            isDeleting = true;
+          timeoutRef.current = window.setTimeout(() => {
+            isDeleting.current = true;
             type();
           }, 1000);
           return;
         }
       } else {
-        if (charIndex > 0) {
-          charIndex--;
+        if (charIndex.current > 0) {
+          charIndex.current--;
         } else {
-          isDeleting = false;
-          textIndex = (textIndex + 1) % TEXTS.length;
+          isDeleting.current = false;
+          textIndex.current = (textIndex.current + 1) % TEXTS.length;
         }
       }
 
-      timeoutId = window.setTimeout(type, isDeleting ? 40 : 80);
+      timeoutRef.current = window.setTimeout(
+        type,
+        isDeleting.current ? 40 : 80,
+      );
     };
 
     type();
 
     return () => {
-      clearTimeout(timeoutId);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
     };
-  }, []);
+  }, [inView]);
 
   return (
     <span
+      ref={heroRef}
       className="relative block mt-5 text-3xl font-medium"
       style={{ width: "520px", maxWidth: "100%" }}
     >
-      {/* layout stabilizer (görünmez placeholder) */}
+      {/* layout stabilizer */}
       <span className="invisible">Modern & Legacy Systems Developer</span>
 
-      {/* gerçek typewriter */}
+      {/* typewriter */}
       <span className="absolute left-0 top-0">
         <span ref={el} />
-        <span className="ml-1 inline-block animate-cursor">|</span>
+        <span className="ml-1 animate-cursor">|</span>
       </span>
     </span>
   );
