@@ -2,6 +2,7 @@
 import { ArrowRightIcon, ArrowLeftIcon } from "lucide-react";
 import { useRef } from "react";
 import SkillCards from "./SkillCard";
+import AnimateView from "./AnimateView";
 
 export default function MySkills() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -123,10 +124,6 @@ export default function MySkills() {
   return (
     <div className="flex min-h-dvh w-full bg-white/4   justify-center items-center px-5 lg:px-20 ">
       <div className="flex flex-col space-y-5 w-full text-white/70  ">
-        <h3 className="text-xl">
-          <span className="text-2xl  text-blue-600">{`//`}</span> My Skills
-        </h3>
-
         <div className="lg:flex space-y-5 justify-between md:w-1/2 ">
           <h1 className="text-2xl lg:text-4xl font-semibold flex items-center ">
             My extensive list of skills

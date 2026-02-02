@@ -44,9 +44,7 @@ export default function Content() {
       </div>
 
       <div ref={mySkillsRef}>
-        <AnimateView>
-          <MySkills />
-        </AnimateView>
+        <MySkills />
       </div>
 
       <div ref={portfolioRef}>
