@@ -122,7 +122,7 @@ export default function MySkills() {
   };
 
   return (
-    <div className="flex min-h-dvh w-full bg-white/4   justify-center items-center px-5 lg:px-20 ">
+    <div className="min-h-dvh portrait:min-h-0 portrait:py-48 flex  w-full bg-white/4   justify-center items-center px-5 lg:px-20 ">
       <div className="flex flex-col space-y-5 w-full text-white/70  ">
         <div className="lg:flex space-y-5 justify-between md:w-1/2 ">
           <h1 className="text-2xl lg:text-4xl font-semibold flex items-center ">
