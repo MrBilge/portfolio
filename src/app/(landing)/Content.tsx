@@ -59,11 +59,11 @@ export default function Content() {
         </AnimateView>
       </div>
 
-      {/* <div ref={contactRef}>
+      <div ref={contactRef}>
         <AnimateView>
           <Contact />
         </AnimateView>
-      </div> */}
+      </div>
 
       <Footer />
     </>
