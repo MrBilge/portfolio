@@ -18,16 +18,19 @@ export function Hero({ onScrollClick }: HeroProps) {
     justify-between
     portrait:justify-start
     portrait:pt-32
-    bg-black/40
     w-full
-    min-h-dvh
+    min-h-[95vh]
     portrait:min-h-0
-    portrait:h-[1000px] 
+    portrait:h-[100vh] 
     portraith:py-48
-    bg-[url('/assets/bilge.png')]
+    bg-[url('/assets/me.jpeg')]
     bg-no-repeat
     bg-center
-    md:bg-top
+    bg-cover
+    xl:bg-[length:40%_auto]
+     sm:bg-[length:70%_auto]
+
+    py-40
     px-5
     lg:px-15
   "
@@ -39,7 +42,7 @@ export function Hero({ onScrollClick }: HeroProps) {
             I&apos;m Bilgehan
             <Typewriter />
           </h1>
-          <p className="text-md  font-sans text-white/50 tracking-widest  lg:w-4/5">
+          <p className="text-lg  font-sans text-white/50 tracking-widest lg:w-3/5">
             I build modern, fast, and user-friendly web experiences using
             Next.js, React, and Tailwind CSS.
             <span className="block mt-2">

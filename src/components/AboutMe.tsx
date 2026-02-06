@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <div className="min-h-dvh portrait:min-h-0 portrait:py-92  flex flex-col md:flex-row md:justify-between     bg-white/2   space-y-5 justify-center items-center  gap-20  px-5 lg:px-40 text-white/60  ">
+    <div className="min-h-dvh portrait:min-h-0 portrait:py-48  flex flex-col md:flex-row md:justify-between     bg-white/2   space-y-5 justify-center items-center  gap-20  px-5 lg:px-40 text-white/60  ">
       <div className="flex flex-col space-y-5 md:w-1/2">
         <h3 className="text-xl">
           <span className="text-amber-300 text-3xl">{`//`}</span> About Me

@@ -3,7 +3,7 @@ import PortfolioCard from "./PortfolioCard";
 
 export default function MyPortfolio() {
   return (
-    <div className="w-full  min-h-dvh portrait:min-h-0 portrait:py-96 flex justify-center items-center bg-white/4 gap-5 py-20  lg:px-20">
+    <div className="w-full  min-h-dvh portrait:min-h-0 portrait:py-48 flex justify-center items-center bg-white/4 gap-5 py-20  lg:px-20">
       <div className="w-full flex flex-col items-center lg:flex-row gap-10 md:gap-20 xl:gap-32 justify-between  px-5  ">
         <div className="space-y-5 w-full lg:w-1/2 text-white/70">
           <h2 className="text-2xl tex">
