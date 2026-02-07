@@ -19,13 +19,13 @@ export function Hero({ onScrollClick }: HeroProps) {
     portrait:justify-start
     portrait:pt-32
     w-full
-    min-h-[95vh]
+    min-h-dvh
     portrait:min-h-0
     portrait:h-[100vh] 
     portraith:py-48
     bg-[url('/assets/me.jpeg')]
     bg-no-repeat
-    bg-center
+    bg-bottom
     bg-cover
     xl:bg-[length:40%_auto]
      sm:bg-[length:70%_auto]
