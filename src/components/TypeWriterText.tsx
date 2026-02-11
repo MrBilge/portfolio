@@ -75,7 +75,7 @@ export default function Typewriter() {
   return (
     <span
       ref={heroRef}
-      className="relative block mt-5 text-3xl font-medium"
+      className="relative block mt-5   text-2xl xl:text-3xl   font-medium"
       style={{ width: "520px", maxWidth: "100%" }}
     >
       {/* layout stabilizer */}

@@ -6,11 +6,11 @@ export default function HeroSkillCard() {
 
       <div
         className="relative z-10 w-80 h-40 rounded-xl bg-black/30 backdrop-blur-md border border-white/10 
-                flex flex-col justify-center gap-3 p-4 text-[11px]"
+                flex flex-col justify-center gap-3 p-4  text-xs xl:text-sm"
       >
         <span
           className=" inline-block w-max px-3 py-1 rounded-full 
-                   bg-white/5 border border-white/10 text-sm
+                   bg-white/5 border border-white/10
                    text-purple-300 tracking-wide"
         >
           Scalable UI Systems
@@ -18,7 +18,8 @@ export default function HeroSkillCard() {
 
         <span
           className="inline-block w-max px-3 py-1 rounded-full 
-                   bg-white/5 border border-white/10    text-sm
+                   bg-white/5 border border-white/10  
+                  
                    text-blue-300 tracking-wide"
         >
           Performance-Focused Design
@@ -26,7 +27,7 @@ export default function HeroSkillCard() {
 
         <span
           className="inline-block w-max px-3 py-1 rounded-full 
-                   bg-white/5 border border-white/10   text-sm
+                   bg-white/5 border border-white/10 
                    text-gray-200 tracking-wide"
         >
           Clean & Maintainable Code
