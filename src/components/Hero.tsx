@@ -43,7 +43,7 @@ export function Hero({ onScrollClick }: HeroProps) {
             I&apos;m Bilgehan
             <Typewriter />
           </h1>
-          <p className="text-sm xl:text-md  font-sans text-white/50 tracking-widest lg:w-3/5">
+          <p className="hidden xl:block text-sm xl:text-md  font-sans text-white/50 tracking-widest lg:w-3/5">
             I build modern, fast, and user-friendly web experiences using
             Next.js, React, and Tailwind CSS.
             <span className="block mt-2">
