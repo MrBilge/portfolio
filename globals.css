@@ -2,11 +2,6 @@
 @tailwind utilities;
 
 
-@import "@fontsource/playfair-display";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
-
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -22,9 +17,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);  
-  --font-playfair: 'Playfair Display', serif;
-  --font-poppins: 'Poppins', Arial, Helvetica, sans-serif;
+  --font-serif: var(--font-geist-sans);
+  --font-mono: var(--font-geist-sans);
+  --font-playfair: var(--font-geist-sans);
+  --font-poppins: var(--font-geist-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,7 +63,7 @@ html, body {
 body {
 background-color: black; 
   color: #E0E6F1;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   min-height: 100%
 }
 
@@ -80,11 +76,11 @@ background-color: black;
 }
 
 .font-poppins {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 .font-playfair {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 .card-surface {
@@ -259,7 +255,7 @@ background-color: black;
 
 .centerHover span {
   color: #aaa;
-  font-family: serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   font-size: 18px;
   position: relative;
   transition: all 300ms ease;

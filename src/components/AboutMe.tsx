@@ -39,7 +39,7 @@ export default function AboutMe() {
           </div>
         </div>
         <p className="font-sans">
-          Successfully delivered 10+ projects across personal and corporate
+          Successfully delivered 15+ projects across personal and corporate
           environments, focusing on clean UI, usability, and real-world
           requirements.
         </p>
