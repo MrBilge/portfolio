@@ -48,9 +48,9 @@ before:pointer-events-none "
         </div>
 
         <div className="flex flex-col justify-center items-center space-y-5">
-          <h1 className="group  font-serif tracking-wide ">
+          <h1 className="group font-serif text-3xl font-medium italic tracking-tight text-[#f2f0eb]">
             Get in touch
-            <ArrowRightIcon className="inline w-10 h-10 text-blue-600 ml-2 transition-all duration-300 group-hover:translate-x-3" />
+            <ArrowRightIcon className="inline w-10 h-10 text-[#a8d5c5] ml-2 transition-all duration-300 group-hover:translate-x-3" />
           </h1>
 
           <div className="flex flex-col md:flex-row gap-8 text-sm text-white/60">

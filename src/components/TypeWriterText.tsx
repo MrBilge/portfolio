@@ -75,11 +75,15 @@ export default function Typewriter() {
   return (
     <span
       ref={heroRef}
-      className="relative block mt-5   text-2xl xl:text-3xl   font-medium"
+      className="relative mt-5 block font-serif text-3xl font-medium italic leading-[1.2] tracking-tight text-[#a8d5c5] xl:text-4xl"
       style={{ width: "520px", maxWidth: "100%" }}
     >
       {/* layout stabilizer */}
-      <span className="invisible">Modern & Legacy Systems Developer</span>
+      <span aria-hidden="true" className="invisible grid">
+        {TEXTS.map((text) => (
+          <span key={text} className="col-start-1 row-start-1">{text}|</span>
+        ))}
+      </span>
 
       {/* typewriter */}
       <span className="absolute left-0 top-0">

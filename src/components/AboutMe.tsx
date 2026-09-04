@@ -9,7 +9,7 @@ export default function AboutMe() {
           <h1 className="text-lg xl:text-4xl font-semibold ">
             Front-End Developer Focused on Modern Web Experiences
           </h1>
-          <p className="text-sm lg:text-lg hidden lg:block font-sans">
+          <p className="hidden lg:block font-sans text-sm font-normal not-italic leading-7 tracking-normal text-white/50">
             I’m passionate about building clean, responsive, and user-friendly
             websites. With a strong eye for detail and a love for learning, I
             constantly strive to improve both my code and user experience. I
@@ -26,19 +26,19 @@ export default function AboutMe() {
       <div className="flex flex-col space-y-5 sm:w-1/2 xl:w-1/3">
         <div className="flex justify-between ">
           <div className="flex space-x-2">
-            <p className="text-6xl">4 </p>
+            <p className="font-serif text-6xl italic text-amber-300">4 </p>
             <p className="flex justify-center items-center">
               Years of Experience
             </p>
           </div>
           <div className="flex space-x-2">
-            <p className="text-6xl">15+ </p>
+            <p className="font-serif text-6xl italic text-amber-300">15+ </p>
             <p className="flex justify-center items-center">
               Successful project
             </p>
           </div>
         </div>
-        <p className="font-sans">
+        <p className="font-sans text-sm font-normal not-italic leading-7 tracking-normal text-white/50">
           Successfully delivered 15+ projects across personal and corporate
           environments, focusing on clean UI, usability, and real-world
           requirements.

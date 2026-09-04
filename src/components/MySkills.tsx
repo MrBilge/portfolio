@@ -132,13 +132,13 @@ export default function MySkills() {
           <div className="hidden sm:flex h-max gap-2 ">
             <button
               onClick={() => handleScroll("left")}
-              className="rounded-3xl p-5 bg-gray-800 hover:bg-cyan-600 transition-all duration-300 hover:scale-75 cursor-pointer"
+              className="rounded-3xl p-5 bg-gray-800 hover:bg-amber-300 hover:text-black transition-all duration-300 hover:scale-75 cursor-pointer"
             >
               <ArrowLeftIcon className="w-6 h-6" />
             </button>
             <button
               onClick={() => handleScroll("right")}
-              className="rounded-3xl p-5 bg-gray-800  hover:bg-cyan-600  transition-all duration-300 hover:scale-75 cursor-pointer"
+              className="rounded-3xl p-5 bg-gray-800 hover:bg-amber-300 hover:text-black transition-all duration-300 hover:scale-75 cursor-pointer"
             >
               <ArrowRightIcon className="w-6 h-6" />
             </button>

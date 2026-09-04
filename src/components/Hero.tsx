@@ -39,11 +39,11 @@ export function Hero({ onScrollClick }: HeroProps) {
       <div className="flex flex-col justify-center  lg:gap-20  sm:w-2/5 xl:w-1/2  mt-0 ">
         <div className="hidden portrait:lg:hidden  lg:block  w-36 h-[10px]  bg-white/10 rounded-full"></div>
         <div className="hidden portrait:lg:hidden lg:block space-y-5 md:space-y-10">
-          <h1 className="text-2xl xl:text-3xl bg-black/60 lg:bg-transparent  text-amber-100 font-sans sm:font-mono ">
+          <h1 className="bg-black/60 font-serif text-4xl font-medium italic leading-[1.1] tracking-tight text-[#f2f0eb] lg:bg-transparent xl:text-5xl">
             I&apos;m Bilgehan
             <Typewriter />
           </h1>
-          <p className="hidden xl:block text-sm xl:text-md  font-sans text-white/50 tracking-widest lg:w-3/5">
+          <p className="hidden xl:block font-sans text-sm font-normal not-italic leading-7 tracking-normal text-white/50 lg:w-3/5">
             I build modern, fast, and user-friendly web experiences using
             Next.js, React, and Tailwind CSS.
             <span className="block mt-2">

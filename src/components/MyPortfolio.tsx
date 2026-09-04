@@ -1,9 +1,10 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import PortfolioCard from "./PortfolioCard";
+import Link from "next/link";
 
 export default function MyPortfolio() {
   return (
-    <div className="w-full  min-h-dvh portrait:min-h-0 portrait:py-48 flex justify-center items-center bg-white/4 gap-5 py-20  lg:px-20">
+    <div className="w-full min-h-dvh portrait:min-h-0 portrait:py-48 flex flex-col justify-center items-center bg-white/4 gap-12 py-20 lg:px-20">
       <div className="w-full flex flex-col items-center lg:flex-row gap-10 md:gap-20 xl:gap-32 justify-between  px-5  ">
         <div className="space-y-5 w-full lg:w-1/2 text-white/70">
           <h2 className="text-2xl tex">
@@ -52,6 +53,13 @@ export default function MyPortfolio() {
           />
         </div>
       </div>
+      <Link
+        href="/projects"
+        className="group inline-flex items-center gap-3 rounded-full border border-amber-300/40 px-6 py-3 text-amber-300 transition-colors hover:bg-amber-300 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300"
+      >
+        Explore more projects
+        <ArrowRightIcon className="size-5 transition-transform group-hover:translate-x-1" />
+      </Link>
     </div>
   );
 }

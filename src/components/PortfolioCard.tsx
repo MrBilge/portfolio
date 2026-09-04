@@ -28,7 +28,7 @@ export default function PortfolioCard({
           <div className="space-y-2">
             <p className="lg:text-xl xl:text-4xl font-semibold">{title} </p>
             <div>
-              <p className=" lg: text-sm font-serif">{description}</p>
+              <p className="font-sans text-sm font-normal not-italic leading-7 tracking-normal text-white/50">{description}</p>
             </div>
           </div>
         </div>

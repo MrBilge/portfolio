@@ -15,7 +15,9 @@ export default function AnimateView({
   delay = 0.4,
 }: AnimateOnViewProps) {
   const { ref, inView } = useInView({
-    threshold: 0.3, // yüzde 20’si görünürse tetiklenir
+    // Tall mobile sections may never fit 30% of their height in the viewport.
+    threshold: 0,
+    rootMargin: "0px 0px -40px 0px",
     triggerOnce: true,
   });
 
