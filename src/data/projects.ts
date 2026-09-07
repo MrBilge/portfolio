@@ -12,6 +12,28 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "jetbacklinks",
+    title: "JetbackLinks",
+    description:
+      "An SEO platform connecting publishers and advertisers through backlink and content placement opportunities. The publisher dashboard brings website listings, advertising options, orders, earnings, and customer reviews together in one streamlined workspace.",
+    img1: "/assets/jetbacklinks-dashboard.png",
+    img2: "/assets/jetbacklinks-new-website.png",
+    img3: "/assets/jetbacklinks-reviews.png",
+    technologies: [],
+    category: "SEO",
+  },
+  {
+    id: "butad-akademi",
+    title: "Butad Akademi",
+    description:
+      "An online learning platform bringing courses, educational books, and personal learning resources together. The interface connects course discovery, video lessons, progress tracking, and certificate access in one clear, accessible experience.",
+    img1: "/assets/butad-akademi-course.png",
+    img2: "/assets/butad-akademi-books.png",
+    img3: "/assets/butad-akademi-login.png",
+    technologies: [],
+    category: "Web Development",
+  },
+  {
     id: "urbon-pop",
     title: "Urbon Pop",
     description:
