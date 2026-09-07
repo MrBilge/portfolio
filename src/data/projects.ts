@@ -32,6 +32,7 @@ export const projects: Project[] = [
     img3: "/assets/butad-akademi-login.png",
     technologies: [],
     category: "Web Development",
+    href: "https://butadakademi.com/",
   },
   {
     id: "urbon-pop",
